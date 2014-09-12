@@ -1,0 +1,4 @@
+<div data-hook="log">
+    <h2>Log</h2>
+    <ul data-hook="commands"></ul>
+</div>
