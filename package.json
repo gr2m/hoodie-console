@@ -4,7 +4,7 @@
   "description": "Hoodie Console",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"no tests yet\""
   },
   "author": "Gregor Martynus <gregor@thehoodiefirm.com>",
   "license": "MIT",
@@ -18,5 +18,8 @@
     "domthing": "~0.1.1",
     "domthingify": "~0.2.0",
     "stylizer": "~1.0.0"
+  },
+  "devDependencies": {
+    "grunt-semantic-release": "~0.2.1"
   }
 }
