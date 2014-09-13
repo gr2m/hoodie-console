@@ -16,7 +16,8 @@ deploy:
     all_branches: true
     tags: true
   api_key:
-    secure: KA10j+NmJsAvX7cAEytMeSBlNPiQYlK1a0+wPcnaURmTcAIeTpuySBQwKaRRwxKHACgUNaDpeNkJVvYf0b0r6MkxiFX91NfcYY0KvPESP7itOSXeoJ24u19DK1yThNiczzQvpGUkFqWuwY66+jh7Z1+5YGLSYvCu6JkfR2wuesQ=
+    secure: e0GCdAeb12gmcWrC6NMWx4Im3aqZkBW6hBGbB2Y6BO+vB9tUc+yvZD1UF6s/YF/I1dyVuwv1E7J971viMI3MPkG3BjpnZkOi67irj4ADsF8R6CiIpopkcvO9TYmNLjqpIfd1FSqcezm7241TSe2MIIOOa9clbR6ryJ1zgA7kENw=
 env:
   global:
-    secure: hyYay22FTtwo8WZE9B67Tg7KO4a76ClaKB50d2gd20NLGrUow+5tSOLdEiLg2zF6GfwPiLnYYtNnFkf5MsmK8wD1PvmwreiKbTrfpOQ30eJca5QVsCLn/T7YyizjrOU1UJIudbce4Vi/N5vE72QIyFCTFjOhPygE5AmoZuygd+U=
+  - secure: hyYay22FTtwo8WZE9B67Tg7KO4a76ClaKB50d2gd20NLGrUow+5tSOLdEiLg2zF6GfwPiLnYYtNnFkf5MsmK8wD1PvmwreiKbTrfpOQ30eJca5QVsCLn/T7YyizjrOU1UJIudbce4Vi/N5vE72QIyFCTFjOhPygE5AmoZuygd+U=
+  - secure: m5ANpU/EhKsyqYfaVO3EaGwd9KDwGXqP3rRHMgrqT/Bp08beegFjGRNrCAabAILSdE3iMDqtFmLGKjR2+MasjM5EaOZQfLp1fQLw94geBtZg5XJylTf4AnVfHcOTA00U4pw7aWUf8/Wu6Rat5qnv7L33mjMdGHGYgTmKJL+s1yU=
