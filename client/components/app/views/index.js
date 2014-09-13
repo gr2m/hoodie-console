@@ -1,33 +1,35 @@
 var View = require('ampersand-view');
-
+var MainNavView = require('../../main-nav/views');
 var ConsoleView = require('../../console/views');
-var LogView = require('../../log/views');
+
 
 module.exports = View.extend({
     template: require('../templates/index.dom'),
     autoRender: true,
 
     subviews: {
-      input: {
-        hook: 'console',
+      nav: {
+        container: 'body > nav',
         waitFor: 'model',
-        constructor: ConsoleView,
+        constructor: MainNavView,
         prepareView: function (el) {
-            return new this.subviews.input.constructor({
+            return new this.subviews.nav.constructor({
                 el: el,
                 parent: this,
-                model: this.model
+                model: this.model,
+                collection: this.collection
             });
         }
       },
-      log: {
-        hook: 'log',
-        waitFor: 'collection',
-        constructor: LogView,
+      main: {
+        container: 'body > main',
+        waitFor: 'model',
+        constructor: ConsoleView,
         prepareView: function (el) {
-            return new this.subviews.log.constructor({
+            return new this.subviews.main.constructor({
                 el: el,
                 parent: this,
+                model: this.model,
                 collection: this.collection
             });
         }

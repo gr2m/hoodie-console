@@ -1,5 +1,5 @@
 var hapi = require('hapi');
-var server = hapi.createServer(8080, 'localhost');
+var server = hapi.createServer(9001, '0.0.0.0');
 var moonboots = require('moonboots_hapi');
 var stylizer = require('stylizer');
 
@@ -9,6 +9,9 @@ server.pack.register({
         appPath: '/{p*}',
         moonboots: {
             main: __dirname + '/client/index.js',
+            libraries: [
+              './node_modules/jquery/dist/jquery.js'
+            ],
             developmentMode: true,
             stylesheets: [
                 __dirname + '/public/app.css'
@@ -31,5 +34,5 @@ server.pack.register({
     }
 }, function () {
     server.start();
-    console.log('app is running at 8080');
+    console.log('app is running at %s', 9001);
 });

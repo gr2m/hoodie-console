@@ -1,0 +1,24 @@
+.console-log
+    article
+        padding 10px 10px 10px 30px
+        margin 2px 0
+        border-left 0 solid transparent
+
+        &[data-state="done"]
+        &[data-state="resolved"]
+        &[data-state="pending"]
+        &[data-state="rejected"]
+            border-left 6px solid transparent
+            padding-left 24px
+
+        &[data-state="done"]
+            border-left-color #ddd
+        &[data-state="resolved"]
+            border-left-color colorSuccess
+        &[data-state="pending"]
+            border-left-color colorError
+        &[data-state="rejected"]
+            border-left-color colorError
+
+        .result
+            color #ccc

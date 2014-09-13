@@ -1,3 +1,4 @@
-<div data-hook="console">
-    > <span data-hook="command"></span>
-</div>
+<main>
+    <div data-hook="prompt"></div>
+    <div data-hook="log"></div>
+</main>

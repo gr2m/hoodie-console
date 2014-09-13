@@ -1,3 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+*:before,
+*:after {
+  box-sizing: border-box;
+}
 body {
+  padding: 6px 0 0;
+  margin: 0;
   font-family: Helvetica, Arial;
+  background-image: linear-gradient(90deg, #2c2a86 20.5%, #078d2d 20.5%, #078d2d 37.5%, #fcb20d 37.5%, #fcb20d 55.5%, #ec5100 55.5%, #ec5100 72.5%, #6a3c06 72.5%, #6a3c06 79.5%, #c01c1b 79.5%);
+  background-size: 300px 6px;
+  background-repeat: repeat-x;
+  background-position: 0 0;
+}
+pre,
+code,
+.text-monospace {
+  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+pre {
+  margin: 0;
+}
+.console-log article {
+  padding: 10px 10px 10px 30px;
+  margin: 2px 0;
+  border-left: 0 solid transparent;
+}
+.console-log article[data-state="done"],
+.console-log article[data-state="resolved"],
+.console-log article[data-state="pending"],
+.console-log article[data-state="rejected"] {
+  border-left: 6px solid transparent;
+  padding-left: 24px;
+}
+.console-log article[data-state="done"] {
+  border-left-color: #ddd;
+}
+.console-log article[data-state="resolved"] {
+  border-left-color: #078d2d;
+}
+.console-log article[data-state="pending"] {
+  border-left-color: #c01c1b;
+}
+.console-log article[data-state="rejected"] {
+  border-left-color: #c01c1b;
+}
+.console-log article .result {
+  color: #ccc;
+}
+body > nav {
+  height: 40px;
+}
+body > nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+body > nav li {
+  width: 20%;
+  height: 40px;
+  line-height: 20px;
+  float: left;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+  text-align: center;
+}
+body > nav li.active {
+  background: #eee;
+}
+body > nav li + li {
+  border-left: 1px solid #ddd;
+}
+.console-prompt {
+  position: relative;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 10px 10px 30px;
+  font-weight: bold;
+  line-height: 20px;
+}
+.console-prompt:before {
+  content: '>';
+  display: block;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-weight: bold;
 }

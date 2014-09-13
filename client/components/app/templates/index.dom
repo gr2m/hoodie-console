@@ -1,5 +1,4 @@
 <body>
-    <h1>Hoodie Console</h1>
-    <div data-hook="console"></div>
-    <div data-hook="log"></div>
+    <nav></nav>
+    <main></main>
 </body>

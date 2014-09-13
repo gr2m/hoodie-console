@@ -1,0 +1,9 @@
+<nav>
+    <ul>
+        <li class="active">Console</li>
+        <li>Events</li>
+        <li>Data</li>
+        <li>Account</li>
+        <li>More</li>
+    </ul>
+</nav>

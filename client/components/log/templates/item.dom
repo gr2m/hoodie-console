@@ -1,1 +1,8 @@
-<li data-hook="command"></li>
+<article data-hook="state" data-state="">
+    <div class="command">
+        <pre data-hook="command"></pre>
+    </div>
+    <div class="result">
+        <pre data-hook="result"></pre>
+    </div>
+</article>
