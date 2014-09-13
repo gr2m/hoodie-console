@@ -1,0 +1,3 @@
+<div class="prompt-suggestions">
+    <ul data-hook="suggestions"></ul>
+</div>

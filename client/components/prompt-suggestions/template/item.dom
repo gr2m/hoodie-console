@@ -1,0 +1,4 @@
+<li>
+    <span class="name" data-command="{{model.fullCommand}}">{{model.name}}</span>
+    <ul data-hook=subtasks></ul>
+</li>

@@ -1,0 +1,8 @@
+<article data-state="{{ model.state }}">
+    <div class="command">
+        <pre>{{model.name}}</pre>
+    </div>
+    <div class="result">
+        <pre>{{ model.result }}</pre>
+    </div>
+</article>

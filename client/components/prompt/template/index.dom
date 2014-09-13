@@ -1,0 +1,10 @@
+<div class="prompt">
+    <div class="command" tabindex="1">
+        <pre>{{model.name}}<span class="cursor"></span></pre>
+
+        <div data-hook="doc"></div>
+        <div data-hook="suggestions"></div>
+    </div>
+
+    <div data-hook="actions"></div>
+</div>

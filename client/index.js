@@ -3,7 +3,7 @@ var moment = require('moment');
 
 var Command = require('./models/command');
 var CommandCollection = require('./models/command-collection');
-var AppView = require('./components/app/views');
+var AppView = require('./components/app/view');
 
 var app = window.app = {};
 
@@ -38,7 +38,7 @@ function startApp() {
         state: 'done'
     }]);
 
-    new AppView({
+    app.view = new AppView({
         el: document.body,
         model: app.command,
         collection: app.commands

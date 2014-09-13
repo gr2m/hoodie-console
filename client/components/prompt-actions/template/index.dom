@@ -1,0 +1,9 @@
+<div class="prompt-actions">
+    <button data-action="cancel">cancel</button>
+    {{#unless model.isRoot}}
+        <button data-action="back">back</button>
+    {{/if}}
+    {{#if model.isExecutable}}
+        <button data-action="run">run</button>
+    {{/if}}
+</div>

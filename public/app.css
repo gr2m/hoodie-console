@@ -1,14 +1,22 @@
 * {
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 *:before,
 *:after {
-  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+       box-sizing: border-box;
 }
 body {
   padding: 6px 0 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   font-family: Helvetica, Arial;
+  font-size: 14px;
+  line-height: 1.42857143;
+  background-image: -webkit-linear-gradient(0deg, #2c2a86 20.5%, #078d2d 20.5%, #078d2d 37.5%, #fcb20d 37.5%, #fcb20d 55.5%, #ec5100 55.5%, #ec5100 72.5%, #6a3c06 72.5%, #6a3c06 79.5%, #c01c1b 79.5%);
   background-image: linear-gradient(90deg, #2c2a86 20.5%, #078d2d 20.5%, #078d2d 37.5%, #fcb20d 37.5%, #fcb20d 55.5%, #ec5100 55.5%, #ec5100 72.5%, #6a3c06 72.5%, #6a3c06 79.5%, #c01c1b 79.5%);
   background-size: 300px 6px;
   background-repeat: repeat-x;
@@ -21,6 +29,31 @@ code,
 }
 pre {
   margin: 0;
+}
+.hide {
+  display: none;
+}
+body > nav {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+}
+body > main {
+  position: absolute;
+  bottom: 40px;
+  top: 6px;
+  left: 0;
+  right: 0;
+  background: #fff;
+}
+body.fullscreen > nav {
+  display: none;
+}
+body.fullscreen > main {
+  top: 0;
+  bottom: 0;
 }
 .console-log article {
   padding: 10px 10px 10px 30px;
@@ -49,8 +82,8 @@ pre {
 .console-log article .result {
   color: #ccc;
 }
-body > nav {
-  height: 40px;
+.prompt-has-focus .console-log {
+  display: none;
 }
 body > nav ul {
   margin: 0;
@@ -63,7 +96,7 @@ body > nav li {
   line-height: 20px;
   float: left;
   padding: 10px;
-  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
   cursor: pointer;
   text-align: center;
 }
@@ -73,18 +106,126 @@ body > nav li.active {
 body > nav li + li {
   border-left: 1px solid #ddd;
 }
-.console-prompt {
+.prompt-actions {
+  display: none;
+  position: absolute;
+  height: 60px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+.prompt-actions button {
+  border: 0;
+  margin: 10px 0 10px 10px;
+  padding: 0 10px;
+  background: #000;
+  color: #fff;
+  line-height: 40px;
+}
+.prompt-has-focus .prompt-actions {
+  display: block;
+}
+.prompt-doc {
+  display: none;
+  padding: 10px;
+  background: #eee;
+}
+.prompt-has-focus .prompt-doc {
+  display: block;
+}
+.prompt-suggestions {
+  display: none;
+  padding: 10px;
+}
+.prompt-suggestions > ul > li {
+  margin-right: 10px;
+  padding-bottom: 10px;
+  max-width: 100%;
+  overflow: auto;
+}
+.prompt-suggestions ul {
+  padding: 0;
+  margin: 0;
+}
+.prompt-suggestions li {
+  display: inline-block;
+  white-space: nowrap;
+}
+.prompt-suggestions li .name {
+  display: inline-block;
+  padding: 0 10px;
+  border-right: 1px solid #fff;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+  line-height: 40px;
+}
+.prompt-suggestions li ul {
+  display: inline-block;
+}
+.prompt-suggestions li li .name {
+  background: #666;
+}
+.prompt-suggestions li li li .name {
+  background: #999;
+}
+.prompt-has-focus .prompt-suggestions {
+  display: block;
+}
+.prompt .command {
   position: relative;
   border-bottom: 1px solid #ddd;
+  outline: none;
+}
+.prompt .command pre {
   padding: 10px 10px 10px 30px;
   font-weight: bold;
-  line-height: 20px;
 }
-.console-prompt:before {
+.prompt .command pre .cursor {
+  display: inline-block;
+  width: 2px;
+  height: 20px;
+  margin: -3px 0;
+  -webkit-animation: 1s blink step-end infinite;
+          animation: 1s blink step-end infinite;
+}
+.prompt:before {
   content: '>';
   display: block;
   position: absolute;
   top: 10px;
   left: 10px;
   font-weight: bold;
+}
+.prompt-has-focus .prompt {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.prompt-has-focus .prompt .command {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 60px;
+  overflow: auto;
+}
+@-webkit-keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #000;
+  }
+}
+@keyframes blink {
+  from, to {
+    background-color: transparent;
+  }
+  50% {
+    background-color: #000;
+  }
 }

@@ -27,6 +27,7 @@ server.pack.register({
                   infile: __dirname + '/client/style/index.styl',
                   outfile: __dirname + '/public/app.css',
                   development: true,
+                  plugins: ['autoprefixer-stylus'],
                   watch: __dirname + '/client/style/**/*.styl'
               }, done);
             }
